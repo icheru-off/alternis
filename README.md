@@ -1,18 +1,12 @@
-<p align="center">
-  <img src="site/assets/logo.png" alt="Alternis" width="320">
-</p>
+![Alternis](site/assets/logo.png)
 
-<p align="center">
-  <strong>Pilote ta recherche d'alternance ou de stage, de la première candidature à la signature.</strong>
-</p>
+**Pilote ta recherche d'alternance ou de stage, de la première candidature à la signature.**
 
-<p align="center">
-  <img alt="PHP" src="https://img.shields.io/badge/PHP-8.0%2B-777BB4?logo=php&logoColor=white">
-  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-5.7%2B%20%2F%20MariaDB%2010.3%2B-4479A1?logo=mysql&logoColor=white">
-  <img alt="PWA" src="https://img.shields.io/badge/PWA-installable-7C5CFC">
-  <img alt="Extension" src="https://img.shields.io/badge/Extension-Firefox%20%7C%20Chrome%20%7C%20Edge%20%7C%20Opera-22D3EE">
-  <img alt="Version" src="https://img.shields.io/badge/version-2.9.2-success">
-</p>
+![PHP 8.0+](https://img.shields.io/badge/PHP-8.0%2B-777BB4?logo=php&logoColor=white)
+![MySQL 5.7+ / MariaDB 10.3+](https://img.shields.io/badge/MySQL-5.7%2B%20%2F%20MariaDB%2010.3%2B-4479A1?logo=mysql&logoColor=white)
+![PWA](https://img.shields.io/badge/PWA-installable-7C5CFC)
+![Extension](https://img.shields.io/badge/Extension-Firefox%20%7C%20Chrome%20%7C%20Edge%20%7C%20Opera-22D3EE)
+![Version 2.9.2](https://img.shields.io/badge/version-2.9.2-success)
 
 ---
 
@@ -270,5 +264,3 @@ Vous avez trouvé une faille ? Merci de la signaler en privé plutôt que par un
 ## Licence
 
 © Alternis — tous droits réservés. Le code est publié pour consultation ; aucune licence de réutilisation n'est accordée tant qu'un fichier `LICENSE` n'est pas ajouté au dépôt.
-#   a l t e r n i s  
- 
