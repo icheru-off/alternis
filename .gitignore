@@ -1,0 +1,28 @@
+# --- Secrets : NE JAMAIS COMMITER ---
+config/config.php
+.env
+*.pem
+
+# --- Données utilisateurs ---
+assets/uploads/*
+!assets/uploads/.gitkeep
+!assets/uploads/.htaccess
+assets/uploads/resources/*
+!assets/uploads/resources/.gitkeep
+!assets/uploads/resources/.htaccess
+
+# --- Paquets générés (publiés dans les Releases GitHub) ---
+extension/dist/
+*.zip
+
+# --- Fichiers d'installation à supprimer en production (gardés dans le dépôt) ---
+# install.php / upgrade.php : versionnés, mais à supprimer du serveur après usage.
+
+# --- Divers ---
+error_log
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+node_modules/

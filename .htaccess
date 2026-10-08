@@ -1,0 +1,27 @@
+# Alternis — règles de sécurité
+Options -Indexes
+
+# Bloque l'accès direct aux fichiers sensibles
+<FilesMatch "\.(sql|md|log|json)$">
+  Require all denied
+</FilesMatch>
+
+# Protège les fichiers cachés (.htaccess, .git, etc.)
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# En-têtes de sécurité (si mod_headers est disponible)
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Le service worker doit pouvoir contrôler toute la portée de l'app
+<IfModule mod_headers.c>
+  <FilesMatch "sw\.js$">
+    Header set Service-Worker-Allowed "/"
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

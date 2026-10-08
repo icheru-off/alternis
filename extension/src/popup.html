@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+  <title>Alternis</title>
+</head>
+<body>
+  <header class="hdr">
+    <div class="brand">
+      <span class="logo">A</span>
+      <strong>Alternis</strong>
+    </div>
+    <button id="logoutBtn" class="link" hidden>Déconnexion</button>
+  </header>
+
+  <!-- Écran de connexion -->
+  <section id="viewLogin" class="view">
+    <h1>Connexion</h1>
+    <p class="sub">Entrez votre identifiant Alternis et un <b>mot de passe d'application</b> (à créer dans Réglages → Extension).</p>
+    <div id="loginErr" class="alert" hidden></div>
+    <label>Site Alternis</label>
+    <input id="baseUrl" type="url" placeholder="https://alternis.fixit-service.fr" autocomplete="off">
+    <label>Identifiant ou e-mail</label>
+    <input id="identifier" type="text" autocomplete="username">
+    <label>Mot de passe d'application</label>
+    <input id="appPassword" type="password" placeholder="xxxx-xxxx-xxxx-xxxx" autocomplete="current-password">
+    <button id="loginBtn" class="btn primary">Se connecter</button>
+  </section>
+
+  <!-- Écran de capture -->
+  <section id="viewCapture" class="view" hidden>
+    <div class="who">Connecté en tant que <b id="whoName"></b></div>
+    <div id="captureErr" class="alert" hidden></div>
+    <div id="captureOk" class="alert ok" hidden></div>
+
+    <div class="detected" id="detectedBadge"></div>
+
+    <label>Entreprise *</label>
+    <input id="fName" type="text">
+    <label>Poste</label>
+    <input id="fPosition" type="text">
+    <div class="row">
+      <div class="col">
+        <label>Ville</label>
+        <input id="fCity" type="text">
+      </div>
+      <div class="col">
+        <label>Date de candidature</label>
+        <input id="fDate" type="date">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label>Statut</label>
+        <select id="fStatus"></select>
+      </div>
+      <div class="col">
+        <label>Type</label>
+        <select id="fChannel"></select>
+      </div>
+    </div>
+
+    <details id="moreWrap">
+      <summary>Plus de détails</summary>
+      <label>Secteur</label>
+      <input id="fSector" type="text">
+      <label>Site web</label>
+      <input id="fWebsite" type="text">
+      <label>Notes</label>
+      <textarea id="fNotes" rows="2"></textarea>
+    </details>
+
+    <div class="actions actions-col">
+      <button id="todoBtn" class="btn ghost" title="Ajouter dans « Offres à faire » pour postuler plus tard">＋ Ajouter aux offres à faire</button>
+      <button id="quickBtn" class="btn primary" title="Ajouter directement comme candidature envoyée">✓ Ajouter en candidature</button>
+      <button id="editBtn" class="btn ghost" title="Modifier avant d'enregistrer">Éditer les informations</button>
+    </div>
+    <label class="switchrow">
+      <input type="checkbox" id="autoCapture" checked>
+      <span>Enregistrer automatiquement quand je postule</span>
+    </label>
+    <label class="switchrow">
+      <input type="checkbox" id="showButtons" checked>
+      <span>Afficher les boutons Alternis sur les pages d'offres</span>
+    </label>
+    <p class="hint" id="srcHint"></p>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>

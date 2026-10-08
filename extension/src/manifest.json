@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Alternis — Suivi de candidatures",
+  "version": "1.4.0",
+  "description": "Enregistrez vos candidatures d'alternance dans Alternis en un clic, depuis n'importe quel site de recrutement.",
+  "default_locale": "fr",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Alternis",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["parsers/parsers.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "alternis@fixit-service.fr",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["websiteContent", "browsingActivity", "authenticationInfo"],
+        "optional": ["technicalAndInteraction"]
+      }
+    }
+  }
+}
